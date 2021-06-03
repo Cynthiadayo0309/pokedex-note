@@ -4,7 +4,6 @@
             <v-flex xs-12>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo">
                 <h1>ポケモン図鑑</h1>
-                <PokemonSearch :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
             </v-flex>
         </v-layout>
 
@@ -14,7 +13,6 @@
 </template>
     
 <script>
-import PokemonSearch from "../components/PokemonSearch"
 import PokemonList from "../components/PokemonList"
 import PokemonDetail from "../components/PokemonDetail"
 
@@ -27,8 +25,7 @@ export default {
         showDetail: false
         }
     },
-    components: {
-      PokemonSearch,  
+    components: { 
       PokemonList,
       PokemonDetail
     },

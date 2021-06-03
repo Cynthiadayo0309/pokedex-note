@@ -1,13 +1,13 @@
 <template>
   <div class="searchbar">
-    <form @submit.prevent="setPokemonUrl">
+    <form>
       <input type="text" placeholder="名前 or 図鑑番号" v-model="searchvalue" />
       <p class="legenda">
           ポケモンの名前や図鑑番号を入力してください<br>
           ※現在、検索機能は使えず、英語名のみ表示しております
       </p>
     </form>
-    <i class="fas fa-search" @click="setPokemonUrl"></i>
+    <i class="fas fa-search"></i>
   </div>
 </template>
 
