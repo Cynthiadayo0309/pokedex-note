@@ -1,24 +1,16 @@
-# cli-project
+# Vue.jsでポケモンの「育成メモ」とPokeAPIで「ポケモン図鑑」を搭載したSPA
 
-## Project setup
-```
-yarn install
-```
+ポートフォリオサイトで使用した機能を公開。
+育成メモのレスポンシブは今回は省きました。
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+機能一覧
 
-### Compiles and minifies for production
-```
-yarn build
-```
+* Googleアカウントのログイン機能
 
-### Lints and fixes files
-```
-yarn lint
-```
+* Vue-CLI
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Vuetify
+
+* Firebase
+
+* PokeAPI
