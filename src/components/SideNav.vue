@@ -35,7 +35,8 @@ export default {
     return {
       items: [
         { title: '育成ノート一覧', icon: 'list', link: { name: 'addresses' } },
-        { title: 'ポケモン図鑑', icon: 'list', link: { name: 'pokedex' } }
+        { title: 'ポケモン図鑑', icon: 'list', link: { name: 'pokedex' } },
+        { title: 'ToDoリスト', icon: 'list', link: { name: 'todo' } }
       ]
     }
   },
