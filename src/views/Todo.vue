@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <h2>ToDoリスト</h2>
+        <h2>やることリスト</h2>
         <form v-on:submit.prevent>
             <input type="text" v-model="newItem">
             <button v-on:click="addItem">追加</button>
@@ -43,10 +43,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    #app ul {
-        list-style: none;
-        li > span.done {
-            text-decoration: line-through;
+    #app {
+        width: 25%;
+        margin: 20px auto 0 auto;
+        h2 {
+            font-size: 2.5rem;
+        }
+        form {
+            margin-left: 30px;
+            input {
+                border: 1px solid gray;
+            }
+        }
+        button {
+            width: 50px;
+            margin-left: 5px;
+            background-color: rgb(206, 205, 205);
+        }
+        ul {
+            list-style: none;
+            margin-top: 2rem;
+            li {
+                margin-bottom: 10px;
+            }
+            li input {
+                margin-right: 1.5rem;
+            }
+            span {
+                font-size: 1.5rem;
+
+            }
+            li > span.done {
+                text-decoration: line-through;
+            }
+            button {
+                float: right;
+            }
         }
     }
 </style>
