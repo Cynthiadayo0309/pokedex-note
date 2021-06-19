@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Addresses from '../views/Addresses.vue'
 import AddressForm from '../views/AddressForm.vue'
+import Todo from '../views/Todo.vue'
 import Pokedex from '../views/Pokedex.vue'
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes = [
     path: '/addresses/:address_id?/edit',
     name: 'address_edit',
     component: AddressForm
+  },
+  {
+    path: '/todo',
+    name: 'todo',
+    component: Todo
   },
   {
     path: '/pokedex',
