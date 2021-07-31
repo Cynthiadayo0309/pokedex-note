@@ -5,6 +5,7 @@ import Addresses from '../views/Addresses.vue'
 import AddressForm from '../views/AddressForm.vue'
 import Todo from '../views/Todo.vue'
 import Pokedex from '../views/Pokedex.vue'
+import VeeValidate from '../views/VeeValidate.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/pokedex',
     name: 'pokedex',
     component: Pokedex
+  },
+  {
+    path: '/veevalidate',
+    name: 'veevalidate',
+    component: VeeValidate
   },
   {
     path: '/about',

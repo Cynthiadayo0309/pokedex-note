@@ -7,7 +7,12 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items v-if="$store.state.login_user">
-        <v-btn @click="logout">ログアウト</v-btn>
+        <v-btn 
+          @click="logout"
+          flat
+        >
+          ログアウト
+        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <SideNav/>

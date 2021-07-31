@@ -46,6 +46,10 @@ export default {
     #app {
         width: 25%;
         margin: 20px auto 0 auto;
+        @media (max-width: 480px) {
+            width: 100%;
+            padding: 0 20px;
+        }
         h2 {
             font-size: 2.5rem;
         }
