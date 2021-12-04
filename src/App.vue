@@ -51,7 +51,34 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['toggleSideMenu', 'setLoginUser', 'logout', 'deleteLoginUser', 'fetchAddresses'])
+    ...mapActions(['toggleSideMenu', 'setLoginUser', 'logout', 'deleteLoginUser', 'fetchAddresses']),
+    createTitleDesc : function(routeInstance) {
+      // タイトルを設定
+      if(routeInstance.meta.title){
+          var setTitle = routeInstance.meta.title
+          document.title = setTitle
+      } else {
+          document.title = 'PokeApp'
+      }
+
+      //メタタグdescription
+      if(routeInstance.meta.desc) {
+        var setDesc = routeInstance.meta.desc
+        document.querySelector("meta[name='description']").setAttribute('content', setDesc)
+      } else {
+        document.querySelector("meta[name='description']").setAttribute('content', 'description is not set')
+      }
+    }
+  },
+  mounted: function() {
+    var routeInstance = this.$route
+    this.createTitleDesc(routeInstance)
+  },
+  watch: {
+    // eslint-disable-next-line no-unused-vars
+    '$route' (routeInstance, from) {
+      this.createTitleDesc(routeInstance)
+    }
   }
 }
 </script>

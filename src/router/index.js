@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Addresses from '../views/Addresses.vue'
-import AddressForm from '../views/AddressForm.vue'
-import Todo from '../views/Todo.vue'
-import Pokedex from '../views/Pokedex.vue'
-import VeeValidate from '../views/VeeValidate.vue'
+import Home from '@/views/Home.vue'
+import Addresses from '@/views/Addresses.vue'
+import AddressForm from '@/views/AddressForm.vue'
+import Todo from '@/views/Todo.vue'
+import Pokedex from '@/views/Pokedex.vue'
+import VeeValidate from '@/views/VeeValidate.vue'
 
 Vue.use(VueRouter)
 
@@ -13,41 +13,39 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { title: 'Home', desc: 'My first vue-cli app' }
   },
   {
     path: '/addresses',
     name: 'addresses',
-    component: Addresses
+    component: Addresses,
+    meta: { title: 'Adresses', desc: 'My first vue-cli app' }
   },
   {
     path: '/addresses/:address_id?/edit',
     name: 'address_edit',
-    component: AddressForm
+    component: AddressForm,
+    meta: { title: 'Address Form', desc: 'My first vue-cli app' }
   },
   {
     path: '/todo',
     name: 'todo',
-    component: Todo
+    component: Todo,
+    meta: { title: 'Todo', desc: 'My first vue-cli app' }
   },
   {
     path: '/pokedex',
     name: 'pokedex',
-    component: Pokedex
+    component: Pokedex,
+    meta: { title: 'Pokedex', desc: 'My first vue-cli app' }
   },
   {
     path: '/veevalidate',
     name: 'veevalidate',
-    component: VeeValidate
+    component: VeeValidate,
+    meta: { title: 'VeeValidate', desc: 'My first vue-cli app' }
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
 ]
 
 const router = new VueRouter({
